@@ -1,12 +1,85 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from "expo-status-bar";
+import React from "react";
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  TouchableHighlight,
+} from "react-native";
+
+import Main from "./Views/Main";
+import Contact from "./Views/Contact";
+import Info from "./Views/Info";
+import Chapters from "./Views/Chapters";
+import Profile from "./Views/Profile";
+import Social from "./Views/Social";
+
+import { NavigationContainer } from "@react-navigation/native";
+import { createStackNavigator } from "@react-navigation/stack";
+
+const Stack = createStackNavigator();
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <NavigationContainer>
+        <Stack.Navigator
+          screenOptions={{
+            headerStyle: {
+              backgroundColor: "#FFFFFF",
+            },
+            headerTitleStyle: {
+              fontWeight: "bold",
+            },
+            headerTintColor: "#000",
+          }}
+          initialRouteName="Main"
+        >
+          <Stack.Screen
+            name="Main"
+            component={Main}
+            options={{
+              title: "Inicio",
+            }}
+          />
+          <Stack.Screen
+            name="Chapters"
+            component={Chapters}
+            options={{
+              title: "Programas",
+            }}
+          />
+          <Stack.Screen
+            name="Info"
+            component={Info}
+            options={{
+              title: "Información",
+            }}
+          />
+          <Stack.Screen
+            name="Email"
+            component={Contact}
+            options={{
+              title: "Contacta con nosotros",
+            }}
+          />
+          <Stack.Screen
+            name="Profile"
+            component={Profile}
+            options={{
+              title: "Perfil",
+            }}
+          />
+          <Stack.Screen
+            name="Social"
+            component={Social}
+            options={{
+              title: "Redes sociales",
+            }}
+          />
+        </Stack.Navigator>
+      </NavigationContainer>
     </View>
   );
 }
@@ -14,8 +87,8 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#f8f9fa",
+    alignSelf: "stretch",
+    justifyContent: "center",
   },
 });
