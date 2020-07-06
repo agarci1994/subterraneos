@@ -2,6 +2,8 @@ import React, {Component} from "react";
 import { Text, View, SafeAreaView , StyleSheet, Image, TouchableOpacity} from "react-native";
 
 import Carousel from "react-native-snap-carousel";
+import Card from './Card'
+
 
 export default class App extends Component {
   constructor(props) {
@@ -32,21 +34,10 @@ export default class App extends Component {
       ],
     };
   }
-
+  
   _renderItem({ item, index }) {
     return (
-      <TouchableOpacity
-      onPress={() => {}}
-        style={{
-          height: "100%",
-          paddingBottom: 100,
-          marginLeft: 25,
-          marginRight: 35,
-        }}
-      >
-        <Image style={styles.img} source={item.img} />
-        <Text style={{ fontSize: 30, fontWeight: "bold" }}>{item.title}</Text>
-      </TouchableOpacity>
+      <Card {...item}/>
     );
   }
 

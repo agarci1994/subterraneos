@@ -14,6 +14,8 @@ import Info from "./Views/Info";
 import Chapters from "./Views/Chapters";
 import Profile from "./Views/Profile";
 import Social from "./Views/Social";
+import Details from "./Views/Details";
+
 
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
@@ -42,6 +44,11 @@ export default function App() {
             options={{
               title: "Inicio",
             }}
+          />
+          <Stack.Screen
+            name="Details"
+            component={({ route }) => <Details props={route.params} />}
+            options={({ route }) => ({ title: route.params.title })}
           />
           <Stack.Screen
             name="Chapters"
