@@ -72,9 +72,12 @@ export default function Info() {
 
 const styles = StyleSheet.create({
   description: {
-margin: 40,
+
+    backgroundColor: "#AEAEAE",
+padding: 40,
 textAlign: "center",
-fontWeight: "bold"
+fontWeight: "bold",
+marginBottom: 30,
   },
   imageContainer: {
     marginTop: 40,
@@ -88,6 +91,7 @@ fontWeight: "bold"
     height: 300
   },
   name: {
+    marginLeft: 20,
     fontSize: 30,
     fontWeight: "bold",
     marginBottom: 30

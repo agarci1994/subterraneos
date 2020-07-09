@@ -18,108 +18,493 @@ export default class App extends Component {
       activeIndex: 0,
       carouselItems: [
         {
-          img: require("../assets/1.jpg"),
+          img: require("../assets/1.jpeg"),
           title: "Desmitificando los años 20",
           library: {
-            films: {
-              documentary: [],
-              fiction: [],
-              TV: [],
-            },
-            musics: {
-              genres: [],
-              artist: [],
-              album: [],
-            },
-            books: {
-              bio: [],
-              fiction: [],
-              essay: [],
-            },
+            films: [
+              {
+                img: require("../assets/film1.jpg"),
+                title: "The Grapes of Wrath",
+                author: "John Ford",
+                year: 1930,
+                details:
+                  "La narración de Angelika Schrobsdorff recons­truye la vida real e inconformista de su madre, una mujer nacida en una familia de la burguesía judía de Berlín, liberada de los prejuicios de su tiempo y deseosa de casarse con un artista ",
+              },
+              {
+                img: require("../assets/film2.jpg"),
+                title: "Tiempos modernos",
+                author: "Charles Chaplin",
+                year: 1936,
+                details:
+                  "Extenuado por el frenético ritmo de la cadena de montaje, un obrero metalúrgico que trabaja apretando tuercas acaba perdiendo la razón. Después de recuperarse en un hospital, sale y es encarcelado por participar en una manifestación en la que se encontraba por casualidad. En la cárcel, también sin pretenderlo, ayuda a controlar un motin, gracias a lo cual queda en libertad. Una vez fuera, emprende la lucha por la victoria en compañía de una pobre joven huérfana a la que conoce en la calle.",
+              },
+              {
+                img: require("../assets/film3.jpg"),
+                title: "Érase una vez en América",
+                author: "Sergio Leone",
+                year: 1984,
+                details:
+                  "La película comienza cuando Noodles tiene que abandonar Nueva York y se cuenta desde entonces con escenas retrospectivas cronológicas desde 1920.",
+              },
+              {
+                img: require("../assets/film4.jpg"),
+                title: "Y el mundo marcha",
+                author: "King Vidor",
+                year: 1928,
+                details:
+                  "Un joven solitario impulsado por la ambición y el idealismo se enfrenta a la vida en el Nueva York de principios del siglo XX. Las duras condiciones que impone esta realidad desmitifican el mítico sueño americano.",
+              },
+            ],
+            musics: [
+              {
+                img: require("../assets/musica1.jpg"),
+                title: "The original Charleston",
+                author: "Isham Jones Orchestra",
+                year: 1925,
+              },
+              {
+                img: require("../assets/musica2.jpg"),
+                title: "Old Time Party Music",
+                author: "Nelson Riddle & His Orchestra",
+                year: 1974,
+              },
+              {
+                img: require("../assets/musica3.jpg"),
+                title: "Nocturnes, Op. 9",
+                author: "Frédéric Chopin",
+                year: 1830,
+              },
+              {
+                img: require("../assets/musica4.jpg"),
+                title: "Royal Crown Revue",
+                author: "Kings Of Gangster Bop",
+                year: 1991,
+              },
+              {
+                img: require("../assets/musica5.jpg"),
+                title: "Peace Piece And Other Pieces",
+                author: "Bill Evans",
+                year: 1975,
+              },
+            ],
+            books: [
+              {
+                img: require("../assets/libro1.jpg"),
+                title: "Tu no eres como otras madres",
+                author: "Angelika Schrobsdorff",
+                year: 2016,
+                details:
+                  "La narración de Angelika Schrobsdorff recons­truye la vida real e inconformista de su madre, una mujer nacida en una familia de la burguesía judía de Berlín, liberada de los prejuicios de su tiempo y deseosa de casarse con un artista ",
+              },
+              {
+                img: require("../assets/libro2.jpg"),
+                title: "The Great Gatsby ",
+                author: "F. Scott Fitzgerald",
+                year: 1927,
+                details:
+                  "Jay Gatsby es un hombre hecho a sí mismo famoso por sus fiestas decadentes y bañadas en champán. A pesar de estar rodeado por la belleza y la belleza de Long Island, solo anhela a Daisy Buchanan. En prosa brillante, Fitzgerald muestra a Gatsby perseguir su sueño hasta su trágica conclusión.",
+              },
+              {
+                img: require("../assets/libro3.jpg"),
+                title: "Carta de una desconocida",
+                author: "Stefan Zweig",
+                year: 1922,
+                details:
+                  "«Sólo quiero hablar contigo, decírtelo todo por primera vez. Tendrías que conocer toda mi vida, que siempre fue la tuya aunque nunca lo supiste. Pero sólo tú conocerás mi secreto, cuando esté muerta y ya no tengas que darme una respuesta; cuando esto que ahora me sacude con escalofríos sea de verdad el final. En el caso de que siguiera viviendo, rompería esta carta y continuaría en silencio, igual que siempre. Si sostienes esta carta en tus manos, sabrás que una muerta te está explicando aquí su vida, una vida que fue siempre la tuya desde la primera hasta la última hora»",
+              },
+            ],
           },
         },
         {
-          img: require("../assets/2.png"),
+          img: require("../assets/2.jpg"),
           title: "La revolución industrial",
           library: {
-            films: {
-              documentary: [],
-              fiction: [],
-              TV: [],
-            },
-            musics: {
-              genres: [],
-              artist: [],
-              album: [],
-            },
-            books: {
-              bio: [],
-              fiction: [],
-              essay: [],
-            },
+            films: [
+              {
+                img: require("../assets/film1.jpg"),
+                title: "The Grapes of Wrath",
+                author: "John Ford",
+                year: 1930,
+                details:
+                  "La narración de Angelika Schrobsdorff recons­truye la vida real e inconformista de su madre, una mujer nacida en una familia de la burguesía judía de Berlín, liberada de los prejuicios de su tiempo y deseosa de casarse con un artista ",
+              },
+              {
+                img: require("../assets/film2.jpg"),
+                title: "Tiempos modernos",
+                author: "Charles Chaplin",
+                year: 1936,
+                details:
+                  "Extenuado por el frenético ritmo de la cadena de montaje, un obrero metalúrgico que trabaja apretando tuercas acaba perdiendo la razón. Después de recuperarse en un hospital, sale y es encarcelado por participar en una manifestación en la que se encontraba por casualidad. En la cárcel, también sin pretenderlo, ayuda a controlar un motin, gracias a lo cual queda en libertad. Una vez fuera, emprende la lucha por la victoria en compañía de una pobre joven huérfana a la que conoce en la calle.",
+              },
+              {
+                img: require("../assets/film3.jpg"),
+                title: "Érase una vez en América",
+                author: "Sergio Leone",
+                year: 1984,
+                details:
+                  "La película comienza cuando Noodles tiene que abandonar Nueva York y se cuenta desde entonces con escenas retrospectivas cronológicas desde 1920.",
+              },
+              {
+                img: require("../assets/film4.jpg"),
+                title: "Y el mundo marcha",
+                author: "King Vidor",
+                year: 1928,
+                details:
+                  "Un joven solitario impulsado por la ambición y el idealismo se enfrenta a la vida en el Nueva York de principios del siglo XX. Las duras condiciones que impone esta realidad desmitifican el mítico sueño americano.",
+              },
+            ],
+            musics: [
+              {
+                img: require("../assets/musica1.jpg"),
+                title: "The original Charleston",
+                author: "Isham Jones Orchestra",
+                year: 1925,
+              },
+              {
+                img: require("../assets/musica2.jpg"),
+                title: "Old Time Party Music",
+                author: "Nelson Riddle & His Orchestra",
+                year: 1974,
+              },
+              {
+                img: require("../assets/musica3.jpg"),
+                title: "Nocturnes, Op. 9",
+                author: "Frédéric Chopin",
+                year: 1830,
+              },
+              {
+                img: require("../assets/musica4.jpg"),
+                title: "Royal Crown Revue",
+                author: "Kings Of Gangster Bop",
+                year: 1991,
+              },
+              {
+                img: require("../assets/musica5.jpg"),
+                title: "Peace Piece And Other Pieces",
+                author: "Bill Evans",
+                year: 1975,
+              },
+            ],
+            books: [
+              {
+                img: require("../assets/libro1.jpg"),
+                title: "Tu no eres como otras madres",
+                author: "Angelika Schrobsdorff",
+                year: 2016,
+                details:
+                  "La narración de Angelika Schrobsdorff recons­truye la vida real e inconformista de su madre, una mujer nacida en una familia de la burguesía judía de Berlín, liberada de los prejuicios de su tiempo y deseosa de casarse con un artista ",
+              },
+              {
+                img: require("../assets/libro2.jpg"),
+                title: "The Great Gatsby ",
+                author: "F. Scott Fitzgerald",
+                year: 1927,
+                details:
+                  "Jay Gatsby es un hombre hecho a sí mismo famoso por sus fiestas decadentes y bañadas en champán. A pesar de estar rodeado por la belleza y la belleza de Long Island, solo anhela a Daisy Buchanan. En prosa brillante, Fitzgerald muestra a Gatsby perseguir su sueño hasta su trágica conclusión.",
+              },
+              {
+                img: require("../assets/libro3.jpg"),
+                title: "Carta de una desconocida",
+                author: "Stefan Zweig",
+                year: 1922,
+                details:
+                  "«Sólo quiero hablar contigo, decírtelo todo por primera vez. Tendrías que conocer toda mi vida, que siempre fue la tuya aunque nunca lo supiste. Pero sólo tú conocerás mi secreto, cuando esté muerta y ya no tengas que darme una respuesta; cuando esto que ahora me sacude con escalofríos sea de verdad el final. En el caso de que siguiera viviendo, rompería esta carta y continuaría en silencio, igual que siempre. Si sostienes esta carta en tus manos, sabrás que una muerta te está explicando aquí su vida, una vida que fue siempre la tuya desde la primera hasta la última hora»",
+              },
+            ],
           },
         },
         {
           img: require("../assets/3.jpg"),
           title: "La guerra del vietnam",
           library: {
-            films: {
-              documentary: [],
-              fiction: [],
-              TV: [],
-            },
-            musics: {
-              genres: [],
-              artist: [],
-              album: [],
-            },
-            books: {
-              bio: [],
-              fiction: [],
-              essay: [],
-            },
+            films: [
+              {
+                img: require("../assets/film1.jpg"),
+                title: "The Grapes of Wrath",
+                author: "John Ford",
+                year: 1930,
+                details:
+                  "La narración de Angelika Schrobsdorff recons­truye la vida real e inconformista de su madre, una mujer nacida en una familia de la burguesía judía de Berlín, liberada de los prejuicios de su tiempo y deseosa de casarse con un artista ",
+              },
+              {
+                img: require("../assets/film2.jpg"),
+                title: "Tiempos modernos",
+                author: "Charles Chaplin",
+                year: 1936,
+                details:
+                  "Extenuado por el frenético ritmo de la cadena de montaje, un obrero metalúrgico que trabaja apretando tuercas acaba perdiendo la razón. Después de recuperarse en un hospital, sale y es encarcelado por participar en una manifestación en la que se encontraba por casualidad. En la cárcel, también sin pretenderlo, ayuda a controlar un motin, gracias a lo cual queda en libertad. Una vez fuera, emprende la lucha por la victoria en compañía de una pobre joven huérfana a la que conoce en la calle.",
+              },
+              {
+                img: require("../assets/film3.jpg"),
+                title: "Érase una vez en América",
+                author: "Sergio Leone",
+                year: 1984,
+                details:
+                  "La película comienza cuando Noodles tiene que abandonar Nueva York y se cuenta desde entonces con escenas retrospectivas cronológicas desde 1920.",
+              },
+              {
+                img: require("../assets/film4.jpg"),
+                title: "Y el mundo marcha",
+                author: "King Vidor",
+                year: 1928,
+                details:
+                  "Un joven solitario impulsado por la ambición y el idealismo se enfrenta a la vida en el Nueva York de principios del siglo XX. Las duras condiciones que impone esta realidad desmitifican el mítico sueño americano.",
+              },
+            ],
+            musics: [
+              {
+                img: require("../assets/musica1.jpg"),
+                title: "The original Charleston",
+                author: "Isham Jones Orchestra",
+                year: 1925,
+              },
+              {
+                img: require("../assets/musica2.jpg"),
+                title: "Old Time Party Music",
+                author: "Nelson Riddle & His Orchestra",
+                year: 1974,
+              },
+              {
+                img: require("../assets/musica3.jpg"),
+                title: "Nocturnes, Op. 9",
+                author: "Frédéric Chopin",
+                year: 1830,
+              },
+              {
+                img: require("../assets/musica4.jpg"),
+                title: "Royal Crown Revue",
+                author: "Kings Of Gangster Bop",
+                year: 1991,
+              },
+              {
+                img: require("../assets/musica5.jpg"),
+                title: "Peace Piece And Other Pieces",
+                author: "Bill Evans",
+                year: 1975,
+              },
+            ],
+            books: [
+              {
+                img: require("../assets/libro1.jpg"),
+                title: "Tu no eres como otras madres",
+                author: "Angelika Schrobsdorff",
+                year: 2016,
+                details:
+                  "La narración de Angelika Schrobsdorff recons­truye la vida real e inconformista de su madre, una mujer nacida en una familia de la burguesía judía de Berlín, liberada de los prejuicios de su tiempo y deseosa de casarse con un artista ",
+              },
+              {
+                img: require("../assets/libro2.jpg"),
+                title: "The Great Gatsby ",
+                author: "F. Scott Fitzgerald",
+                year: 1927,
+                details:
+                  "Jay Gatsby es un hombre hecho a sí mismo famoso por sus fiestas decadentes y bañadas en champán. A pesar de estar rodeado por la belleza y la belleza de Long Island, solo anhela a Daisy Buchanan. En prosa brillante, Fitzgerald muestra a Gatsby perseguir su sueño hasta su trágica conclusión.",
+              },
+              {
+                img: require("../assets/libro3.jpg"),
+                title: "Carta de una desconocida",
+                author: "Stefan Zweig",
+                year: 1922,
+                details:
+                  "«Sólo quiero hablar contigo, decírtelo todo por primera vez. Tendrías que conocer toda mi vida, que siempre fue la tuya aunque nunca lo supiste. Pero sólo tú conocerás mi secreto, cuando esté muerta y ya no tengas que darme una respuesta; cuando esto que ahora me sacude con escalofríos sea de verdad el final. En el caso de que siguiera viviendo, rompería esta carta y continuaría en silencio, igual que siempre. Si sostienes esta carta en tus manos, sabrás que una muerta te está explicando aquí su vida, una vida que fue siempre la tuya desde la primera hasta la última hora»",
+              },
+            ],
           },
         },
         {
           img: require("../assets/4.jpg"),
           title: "Guerra civil",
           library: {
-            films: {
-              documentary: [],
-              fiction: [],
-              TV: [],
-            },
-            musics: {
-              genres: [],
-              artist: [],
-              album: [],
-            },
-            books: {
-              bio: [],
-              fiction: [],
-              essay: [],
-            },
+            films: [
+              {
+                img: require("../assets/film1.jpg"),
+                title: "The Grapes of Wrath",
+                author: "John Ford",
+                year: 1930,
+                details:
+                  "La narración de Angelika Schrobsdorff recons­truye la vida real e inconformista de su madre, una mujer nacida en una familia de la burguesía judía de Berlín, liberada de los prejuicios de su tiempo y deseosa de casarse con un artista ",
+              },
+              {
+                img: require("../assets/film2.jpg"),
+                title: "Tiempos modernos",
+                author: "Charles Chaplin",
+                year: 1936,
+                details:
+                  "Extenuado por el frenético ritmo de la cadena de montaje, un obrero metalúrgico que trabaja apretando tuercas acaba perdiendo la razón. Después de recuperarse en un hospital, sale y es encarcelado por participar en una manifestación en la que se encontraba por casualidad. En la cárcel, también sin pretenderlo, ayuda a controlar un motin, gracias a lo cual queda en libertad. Una vez fuera, emprende la lucha por la victoria en compañía de una pobre joven huérfana a la que conoce en la calle.",
+              },
+              {
+                img: require("../assets/film3.jpg"),
+                title: "Érase una vez en América",
+                author: "Sergio Leone",
+                year: 1984,
+                details:
+                  "La película comienza cuando Noodles tiene que abandonar Nueva York y se cuenta desde entonces con escenas retrospectivas cronológicas desde 1920.",
+              },
+              {
+                img: require("../assets/film4.jpg"),
+                title: "Y el mundo marcha",
+                author: "King Vidor",
+                year: 1928,
+                details:
+                  "Un joven solitario impulsado por la ambición y el idealismo se enfrenta a la vida en el Nueva York de principios del siglo XX. Las duras condiciones que impone esta realidad desmitifican el mítico sueño americano.",
+              },
+            ],
+            musics: [
+              {
+                img: require("../assets/musica1.jpg"),
+                title: "The original Charleston",
+                author: "Isham Jones Orchestra",
+                year: 1925,
+              },
+              {
+                img: require("../assets/musica2.jpg"),
+                title: "Old Time Party Music",
+                author: "Nelson Riddle & His Orchestra",
+                year: 1974,
+              },
+              {
+                img: require("../assets/musica3.jpg"),
+                title: "Nocturnes, Op. 9",
+                author: "Frédéric Chopin",
+                year: 1830,
+              },
+              {
+                img: require("../assets/musica4.jpg"),
+                title: "Royal Crown Revue",
+                author: "Kings Of Gangster Bop",
+                year: 1991,
+              },
+              {
+                img: require("../assets/musica5.jpg"),
+                title: "Peace Piece And Other Pieces",
+                author: "Bill Evans",
+                year: 1975,
+              },
+            ],
+            books: [
+              {
+                img: require("../assets/libro1.jpg"),
+                title: "Tu no eres como otras madres",
+                author: "Angelika Schrobsdorff",
+                year: 2016,
+                details:
+                  "La narración de Angelika Schrobsdorff recons­truye la vida real e inconformista de su madre, una mujer nacida en una familia de la burguesía judía de Berlín, liberada de los prejuicios de su tiempo y deseosa de casarse con un artista ",
+              },
+              {
+                img: require("../assets/libro2.jpg"),
+                title: "The Great Gatsby ",
+                author: "F. Scott Fitzgerald",
+                year: 1927,
+                details:
+                  "Jay Gatsby es un hombre hecho a sí mismo famoso por sus fiestas decadentes y bañadas en champán. A pesar de estar rodeado por la belleza y la belleza de Long Island, solo anhela a Daisy Buchanan. En prosa brillante, Fitzgerald muestra a Gatsby perseguir su sueño hasta su trágica conclusión.",
+              },
+              {
+                img: require("../assets/libro3.jpg"),
+                title: "Carta de una desconocida",
+                author: "Stefan Zweig",
+                year: 1922,
+                details:
+                  "«Sólo quiero hablar contigo, decírtelo todo por primera vez. Tendrías que conocer toda mi vida, que siempre fue la tuya aunque nunca lo supiste. Pero sólo tú conocerás mi secreto, cuando esté muerta y ya no tengas que darme una respuesta; cuando esto que ahora me sacude con escalofríos sea de verdad el final. En el caso de que siguiera viviendo, rompería esta carta y continuaría en silencio, igual que siempre. Si sostienes esta carta en tus manos, sabrás que una muerta te está explicando aquí su vida, una vida que fue siempre la tuya desde la primera hasta la última hora»",
+              },
+            ],
           },
         },
         {
           img: require("../assets/5.jpg"),
           title: "Luchas por los derechos LGTB",
           library: {
-            films: {
-              documentary: [],
-              fiction: [],
-              TV: [],
-            },
-            musics: {
-              genres: [],
-              artist: [],
-              album: [],
-            },
-            books: {
-              bio: [],
-              fiction: [],
-              essay: [],
-            },
+            films: [
+              {
+                img: require("../assets/film1.jpg"),
+                title: "The Grapes of Wrath",
+                author: "John Ford",
+                year: 1930,
+                details:
+                  "La narración de Angelika Schrobsdorff recons­truye la vida real e inconformista de su madre, una mujer nacida en una familia de la burguesía judía de Berlín, liberada de los prejuicios de su tiempo y deseosa de casarse con un artista ",
+              },
+              {
+                img: require("../assets/film2.jpg"),
+                title: "Tiempos modernos",
+                author: "Charles Chaplin",
+                year: 1936,
+                details:
+                  "Extenuado por el frenético ritmo de la cadena de montaje, un obrero metalúrgico que trabaja apretando tuercas acaba perdiendo la razón. Después de recuperarse en un hospital, sale y es encarcelado por participar en una manifestación en la que se encontraba por casualidad. En la cárcel, también sin pretenderlo, ayuda a controlar un motin, gracias a lo cual queda en libertad. Una vez fuera, emprende la lucha por la victoria en compañía de una pobre joven huérfana a la que conoce en la calle.",
+              },
+              {
+                img: require("../assets/film3.jpg"),
+                title: "Érase una vez en América",
+                author: "Sergio Leone",
+                year: 1984,
+                details:
+                  "La película comienza cuando Noodles tiene que abandonar Nueva York y se cuenta desde entonces con escenas retrospectivas cronológicas desde 1920.",
+              },
+              {
+                img: require("../assets/film4.jpg"),
+                title: "Y el mundo marcha",
+                author: "King Vidor",
+                year: 1928,
+                details:
+                  "Un joven solitario impulsado por la ambición y el idealismo se enfrenta a la vida en el Nueva York de principios del siglo XX. Las duras condiciones que impone esta realidad desmitifican el mítico sueño americano.",
+              },
+            ],
+            musics: [
+              {
+                img: require("../assets/musica1.jpg"),
+                title: "The original Charleston",
+                author: "Isham Jones Orchestra",
+                year: 1925,
+              },
+              {
+                img: require("../assets/musica2.jpg"),
+                title: "Old Time Party Music",
+                author: "Nelson Riddle & His Orchestra",
+                year: 1974,
+              },
+              {
+                img: require("../assets/musica3.jpg"),
+                title: "Nocturnes, Op. 9",
+                author: "Frédéric Chopin",
+                year: 1830,
+              },
+              {
+                img: require("../assets/musica4.jpg"),
+                title: "Royal Crown Revue",
+                author: "Kings Of Gangster Bop",
+                year: 1991,
+              },
+              {
+                img: require("../assets/musica5.jpg"),
+                title: "Peace Piece And Other Pieces",
+                author: "Bill Evans",
+                year: 1975,
+              },
+            ],
+            books: [
+              {
+                img: require("../assets/libro1.jpg"),
+                title: "Tu no eres como otras madres",
+                author: "Angelika Schrobsdorff",
+                year: 2016,
+                details:
+                  "La narración de Angelika Schrobsdorff recons­truye la vida real e inconformista de su madre, una mujer nacida en una familia de la burguesía judía de Berlín, liberada de los prejuicios de su tiempo y deseosa de casarse con un artista ",
+              },
+              {
+                img: require("../assets/libro2.jpg"),
+                title: "The Great Gatsby ",
+                author: "F. Scott Fitzgerald",
+                year: 1927,
+                details:
+                  "Jay Gatsby es un hombre hecho a sí mismo famoso por sus fiestas decadentes y bañadas en champán. A pesar de estar rodeado por la belleza y la belleza de Long Island, solo anhela a Daisy Buchanan. En prosa brillante, Fitzgerald muestra a Gatsby perseguir su sueño hasta su trágica conclusión.",
+              },
+              {
+                img: require("../assets/libro3.jpg"),
+                title: "Carta de una desconocida",
+                author: "Stefan Zweig",
+                year: 1922,
+                details:
+                  "«Sólo quiero hablar contigo, decírtelo todo por primera vez. Tendrías que conocer toda mi vida, que siempre fue la tuya aunque nunca lo supiste. Pero sólo tú conocerás mi secreto, cuando esté muerta y ya no tengas que darme una respuesta; cuando esto que ahora me sacude con escalofríos sea de verdad el final. En el caso de que siguiera viviendo, rompería esta carta y continuaría en silencio, igual que siempre. Si sostienes esta carta en tus manos, sabrás que una muerta te está explicando aquí su vida, una vida que fue siempre la tuya desde la primera hasta la última hora»",
+              },
+            ],
           },
         },
       ],

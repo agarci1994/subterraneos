@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import { StyleSheet, Text, View, Image } from "react-native";
 import { Audio } from "expo-av";
 import { TouchableOpacity } from "react-native-gesture-handler";
-import { useNavigation } from "@react-navigation/native";
+import { useNavigation, CurrentRenderContext } from "@react-navigation/native";
 
 export default function Details({ props }) {
   const navigation = useNavigation();
   let soundObject = new Audio.Sound();
-  const [position, setPosition] = useState();
+  const [position, setPosition] = useState(3000);
   let player = false;
 
   const startAudio = async () => {
@@ -20,7 +20,6 @@ export default function Details({ props }) {
         try {
           await soundObject.loadAsync(require("../assets/programa1.mp3"));
           await soundObject.playAsync();
-          // Your sound is playing!
         } catch (error) {
           console.log(error);
         }
@@ -49,16 +48,15 @@ export default function Details({ props }) {
       console.log(error);
     }
   };
-
   return (
     <>
       <View style={styles.imageContainer}>
-        <Text>Puedes escuchar el programa aquí: </Text>
+        <Text style={styles.text}>Puedes escuchar el programa aquí: </Text>
         <View style={styles.player}>
           <TouchableOpacity onPress={startAudio}>
             <Image source={require("../assets/play.png")} />
           </TouchableOpacity>
-          <TouchableOpacity onPress={pauseAudio}>
+           <TouchableOpacity onPress={pauseAudio}>
             <Image source={require("../assets/pause.png")} />
           </TouchableOpacity>
           <TouchableOpacity onPress={stopAudio}>
@@ -69,7 +67,7 @@ export default function Details({ props }) {
           <TouchableOpacity
             onPress={() =>
               navigation.navigate("Sections", {
-                library: props.library.musics,
+                library: props["library"].musics,
                 type: "Música",
               })
             }
@@ -82,7 +80,7 @@ export default function Details({ props }) {
           <TouchableOpacity
             onPress={() =>
               navigation.navigate("Sections", {
-                library: props.library.films,
+                library: props["library"].films,
                 type: "Cinematografía",
               })
             }
@@ -95,7 +93,7 @@ export default function Details({ props }) {
           <TouchableOpacity
             onPress={() =>
               navigation.navigate("Sections", {
-                library: props.library.books,
+                library: props["library"].books,
                 type: "Literatura",
               })
             }
@@ -118,6 +116,10 @@ const styles = StyleSheet.create({
     height: "40%",
     width: "80%",
     borderRadius: 100,
+  },
+  text:{
+    marginLeft:20,
+    marginBottom: 20
   },
   player: {
     flex: 1,
