@@ -15,6 +15,8 @@ import Chapters from "./Views/Chapters";
 import Profile from "./Views/Profile";
 import Social from "./Views/Social";
 import Details from "./Views/Details";
+import Sections from "./Views/Sections";
+
 
 
 import { NavigationContainer } from "@react-navigation/native";
@@ -49,6 +51,11 @@ export default function App() {
             name="Details"
             component={({ route }) => <Details props={route.params} />}
             options={({ route }) => ({ title: route.params.title })}
+          />
+          <Stack.Screen
+            name="Sections"
+            component={({ route }) => <Sections props={route.params} />}
+            options={({ route }) => ({ title: route.params.type })}
           />
           <Stack.Screen
             name="Chapters"
