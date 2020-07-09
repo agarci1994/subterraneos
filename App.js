@@ -60,7 +60,7 @@ export default function App() {
             name="MoreInfo"
             component={({ route }) => <DetailsLibrary props={route.params} />}
             options={({ route }) => ({
-              title: route.params.type,
+              title: route.params.item.title,
             })}
           />
           <Stack.Screen

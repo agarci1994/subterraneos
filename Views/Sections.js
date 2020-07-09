@@ -5,8 +5,6 @@ import {
   Text,
   Image,
   TouchableHighlight,
-  FlatList,
-  ScrollView,
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
