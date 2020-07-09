@@ -18,6 +18,7 @@ export default class App extends Component {
       activeIndex: 0,
       carouselItems: [
         {
+          program: require("../assets/programa1.mp3"),
           img: require("../assets/1.jpeg"),
           title: "Desmitificando los años 20",
           library: {
@@ -121,6 +122,7 @@ export default class App extends Component {
           },
         },
         {
+          program: require("../assets/programa1.mp3"),
           img: require("../assets/2.jpg"),
           title: "La revolución industrial",
           library: {
@@ -317,6 +319,7 @@ export default class App extends Component {
           },
         },
         {
+          program: require("../assets/programa1.mp3"),
           img: require("../assets/4.jpg"),
           title: "Guerra civil",
           library: {
@@ -415,6 +418,7 @@ export default class App extends Component {
           },
         },
         {
+          program: require("../assets/programa1.mp3"),
           img: require("../assets/5.jpg"),
           title: "Luchas por los derechos LGTB",
           library: {

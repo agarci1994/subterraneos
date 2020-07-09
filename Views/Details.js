@@ -9,16 +9,16 @@ export default function Details({ props }) {
   let soundObject = new Audio.Sound();
   const [position, setPosition] = useState(3000);
   let player = false;
-
+  
   const startAudio = async () => {
     if (!player) {
       if (position) {
-        await soundObject.loadAsync(require("../assets/programa1.mp3"));
+        await soundObject.loadAsync(props.program);
         await soundObject.setPositionAsync(position);
         await soundObject.playAsync();
       } else {
         try {
-          await soundObject.loadAsync(require("../assets/programa1.mp3"));
+          await soundObject.loadAsync(props.program);
           await soundObject.playAsync();
         } catch (error) {
           console.log(error);
