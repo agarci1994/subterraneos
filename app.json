@@ -8,6 +8,11 @@
     "android": {
       "package": "com.subterraneo.subterraneo"
     },
+    "ios": {
+      "bundleIdentifier": "com.radio.subter",
+      "buildNumber": "1.0.0",
+      "supportsTablet": true
+    },
     "splash": {
       "image": "./assets/raices.png",
       "resizeMode": "contain",
@@ -19,9 +24,6 @@
     "assetBundlePatterns": [
       "**/*"
     ],
-    "ios": {
-      "supportsTablet": true
-    },
     "web": {
       "favicon": "./assets/favicon.png"
     }
