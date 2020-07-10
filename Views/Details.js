@@ -9,7 +9,7 @@ export default function Details({ props }) {
   let soundObject = new Audio.Sound();
   const [position, setPosition] = useState(3000);
   let player = false;
-  
+  console.log(props.program)
   const startAudio = async () => {
     if (!player) {
       if (position) {
